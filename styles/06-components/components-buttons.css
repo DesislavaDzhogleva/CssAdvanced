@@ -1,0 +1,26 @@
+.btn {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn--secondary {
+  color: white;
+  background: #FF9100;
+}
+
+.btn--small {
+  font-size: 13px;
+}
+
+.btn--medium {
+  font-size: 16px;
+}

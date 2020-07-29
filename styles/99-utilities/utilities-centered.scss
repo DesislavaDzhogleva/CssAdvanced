@@ -1,0 +1,9 @@
+.centered {
+    text-align: center;
+}
+
+.centered__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
