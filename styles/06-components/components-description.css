@@ -1,0 +1,17 @@
+.description {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  justify-content: space-between;
+}
+
+.description__images {
+  position: relative;
+}
+
+.description__image--main {
+  width: 100%;
+}
+
+.description__image--positioned {
+  position: absolute;
+}
