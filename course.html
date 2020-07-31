@@ -10,7 +10,6 @@
 
 <body>
     <header class="header">
-
         <div class="navigation content--wrapper">
             <article class="navigation__logo">
                 <img src="./assets/arrow.svg" alt="arrow">
@@ -58,38 +57,34 @@
         <div class="header__cta content--wrapper">
             <button class="btn btn--secondary btn--medium">записване</button>
             <div class="header__item">
-                <img src="./assets/reward.png" alt="money">
-                <div class="header__description">
-                    <span>цена</span>
-                    <span>500 лв.</span>
-                </div>
+                <img class="header__image" src="./assets/reward.png" alt="money">
+                <span class="header__subtext">цена</span>
+                <span class="header__text">500 лв.</span>
+                <span class="header__border"></span>
             </div>
             <div class="header__item">
-                <img src="./assets/people.png" alt="money">
-                <div class="header__description">
-                    <span>подходящ за</span>
-                    <span>1-6 клас</span>
-                </div>
+                <img class="header__image" src="./assets/people.png" alt="money">
+                <span class="header__subtext">подходящ за</span>
+                <span class="header__text">1-6 клас</span>
+                <span class="header__border"></span>
             </div>
             <div class="header__item">
-                <img src="./assets/calendar.png" alt="money">
-                <div class="header__description">
-                    <span>начало</span>
-                    <span>16 май 2020</span>
-                </div>
+                <img class="header__image" src="./assets/calendar.png" alt="money">
+                <span class="header__subtext">начало</span>
+                <span class="header__text">16 май 2020</span>
+                <span class="header__border"></span>
             </div>
             <div class="header__item">
-                <img src="./assets/location.png" alt="money">
-                <div class="header__description">
-                    <span>локация</span>
-                    <span>граф София</span>
-                </div>
+                <img class="header__image" src="./assets/location.png" alt="money">
+                <span class="header__subtext">локация</span>
+                <span class="header__text">граф София</span>
+                <span class="header__border"></span>
             </div>
         </div>
 
     </header>
-    <div class="main content--wrapper">
-        <div class="description">
+    <main class="main">
+        <div class="description content--wrapper">
             <div class="description__content">
                 <p>Това е втора част към онлайн обучението „Първи стъпки в програмирането”, който е първият и основополагащ онлайн модул по време на обучението по програмиране на SoftUni Kids. Той е насочен към изграждане на основни компетенции и умения,
                     необходими на децата, за да продължат обучението си в следващи модули от програмата ни за малки програмисти. Първо ниво в направление софтуерни курсове се смята за преминато, след завършване и на двете части от курса и получен сертификат.
@@ -105,7 +100,7 @@
                 <img class="description__image description__image--positioned centered__position" src="./assets/playButton.png" alt="play button">
             </div>
         </div>
-        <div class="cards">
+        <div class="cards content--wrapper">
             <div class="card">
                 <div class="card__icon">
                     <img src="./assets/people.png" alt="people">
@@ -128,7 +123,35 @@
                 </div>
             </div>
         </div>
-        <div class="cards">
+        <div class="programs">
+            <div class="program content--wrapper">
+                <div class="program__icon">
+                    <img src="./assets/book.png" alt="book">
+                </div>
+                <h2 class="program__heading">Програма на обучението</h2>
+                <div class="program__content">
+                    <p>През цялото време на курса ще имаме постоянна двустранна комуникация с децата. Ще имат възможност да ни задават въпроси и да общуват помежду си (най-вече в почивките и след занятия). Ще се забавляваме докато учим как да прогамираме.
+                    </p>
+                </div>
+                <div class="program__image">
+                    <img src="./assets/organizer.svg" alt="orgnizer">
+                </div>
+            </div>
+        </div>
+
+        <div class="certificat  content--wrapper">
+            <div class="certificat__icon">
+                <img src="./assets/reward.png" alt="reward">
+            </div>
+            <h2 class="certificat__heading">Сертификат</h2>
+            <div class="certificat__content">
+                <p>Да се опише максимално подробно кога и къде се провеждат занятията. За примера съм изпозлвал описание от онлайн курс</p>
+            </div>
+            <div class="certificat__image">
+                <p class="cenriticat__image-text">Снимка на сертификата</p>
+            </div>
+        </div>
+        <div class="cards  content--wrapper">
             <div class="card">
                 <div class="card__icon">
                     <img src="./assets/clock.png" alt="clock">
@@ -161,8 +184,53 @@
             </div>
         </div>
 
+    </main>
+    <footer class="footer">
+        <div class="footer__image">
+            <img src="./assets/PenguinCyclop.svg">
+        </div>
+        <section class="footer__section">
+            <h5 class="footer__heading">Softuni Kids</h5>
+            <ul class="footer__nav">
+                <li class="footer__nav-item"><a href="#">Начало</a></li>
+                <li class="footer__nav-item"><a href="#">Летни академии</a></li>
+                <li class="footer__nav-item"><a href="#">Преподаватели</a></li>
+                <li class="footer__nav-item"><a href="#">Блог</a></li>
+                <li class="footer__nav-item"><a href="#">Контакти</a></li>
+                <li class="footer__nav-item"><a href="#">Общи условия</a></li>
+                <li class="footer__nav-item"><a href="#">Лични Данни</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h5 class="footer__heading">Всички Обучения</h5>
+            <ul class="footer__nav">
+                <li class="footer__nav-item"><a href="#">Курсове</a></li>
+                <li class="footer__nav-item"><a href="#">Събития</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h5 class="footer__heading">Всички инициативи</h5>
+            <ul class="footer__nav">
+                <li class="footer__nav-item"><a href="#">Software University</a></li>
+                <li class="footer__nav-item"><a href="#">Softuni Digital</a></li>
+                <li class="footer__nav-item"><a href="#">Softuni Creative</a></li>
+                <li class="footer__nav-item"><a href="#">Softuni Svetlina</a></li>
+                <li class="footer__nav-item"><a href="#">Softuni Foundation</a></li>
+            </ul>
+        </section>
+        <section class="footer__section">
+            <h5 class="footer__heading footer__heading--social">Намери Ни</h5>
+            <section class="footer__social">
+                <a href="#" class="footer__social-item"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="footer__social-item"><i class="fab fa-instagram"></i></a>
+            </section>
+            <div class="footer__copyright">
+                © 2016-2020 - SoftUni Kids. All Rights Reserved.
+            </div>
+        </section>
+    </footer>
 
-    </div>
 </body>
+
 
 </html>

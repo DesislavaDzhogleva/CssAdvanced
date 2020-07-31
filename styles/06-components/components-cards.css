@@ -1,7 +1,6 @@
 .cards {
   display: flex;
   flex-flow: row;
-  margin: 5rem 0;
 }
 
 .card {
@@ -12,11 +11,11 @@
 }
 
 .card:first-child {
-  border-right: 12px dotted #FFECB3;
   padding-right: 4rem;
 }
 
 .card:last-child {
+  border-left: 12px dotted #FFECB3;
   padding-left: 4rem;
 }
 

@@ -1,0 +1,9 @@
+@import '../01-settings/settings-colors.scss';
+.certificat {
+    &__image {
+        background-color: $grey-300;
+        width: 350px;
+        height: 250px;
+        position: relative;
+    }
+}
