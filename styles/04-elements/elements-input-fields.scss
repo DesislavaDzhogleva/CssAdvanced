@@ -11,6 +11,7 @@ select {
     color: $grey-700;
     border-radius: 6px;
     padding: 0.8rem;
+    font-weight: bold;
     &:hover {
         cursor: pointer;
     }

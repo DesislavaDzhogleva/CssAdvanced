@@ -8,6 +8,7 @@ select {
   color: #565656;
   border-radius: 6px;
   padding: 0.8rem;
+  font-weight: bold;
 }
 
 select:hover {
