@@ -22,4 +22,27 @@
   grid-row: 3;
   grid-column: -1;
   justify-self: end;
+  align-self: end;
+}
+
+.program__form {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.program__subtitle {
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.program__select {
+  position: relative;
+}
+
+.program__select:after {
+  content: "";
+  background: url("../../assets/arrow_select.png") center no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

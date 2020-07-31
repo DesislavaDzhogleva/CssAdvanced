@@ -44,6 +44,7 @@
     &__title {
         font-size: 2.2rem;
         width: 50%;
+        color: white;
     }
     &__label {
         font-size: 12px;
@@ -53,6 +54,7 @@
         padding: 0.4rem 0.6rem;
         background-color: $secondary-500;
         text-transform: uppercase;
+        color: white;
     }
     &__info {
         background: $blue-400;

@@ -249,6 +249,7 @@ summary {
 html,
 * {
   font-family: 'Lato', sans-serif;
+  color: #565656;
 }
 
 a {
@@ -320,6 +321,26 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+}
+
+select {
+  background: #F8F8F8;
+  border: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  margin-bottom: 1rem;
+  width: 100%;
+  color: #565656;
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+select::placeholder {
+  color: #919191;
 }
 
 .content--wrapper {
@@ -394,6 +415,7 @@ p {
 .header__title {
   font-size: 2.2rem;
   width: 50%;
+  color: white;
 }
 
 .header__label {
@@ -404,6 +426,7 @@ p {
   padding: 0.4rem 0.6rem;
   background-color: #FFC20A;
   text-transform: uppercase;
+  color: white;
 }
 
 .header__info {
@@ -631,6 +654,29 @@ p {
   grid-row: 3;
   grid-column: -1;
   justify-self: end;
+  align-self: end;
+}
+
+.program__form {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.program__subtitle {
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.program__select {
+  position: relative;
+}
+
+.program__select:after {
+  content: "";
+  background: url("../../assets/arrow_select.png") center no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .footer {
@@ -706,4 +752,11 @@ p {
   display: grid;
   grid-template-rows: repeat(6, auto);
   row-gap: 5rem;
+}
+
+.certificate__image {
+  background-color: #D6D6D6;
+  width: 350px;
+  height: 250px;
+  position: relative;
 }
