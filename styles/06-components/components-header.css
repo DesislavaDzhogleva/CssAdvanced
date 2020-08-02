@@ -14,7 +14,7 @@
 
 .header__cta {
   display: grid;
-  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-columns: 20% .3fr auto auto auto auto;
   position: relative;
   top: -60px;
   align-items: center;
@@ -35,6 +35,7 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   grid-column-gap: 2rem;
+  font-size: 1.125rem;
 }
 
 .header__image {

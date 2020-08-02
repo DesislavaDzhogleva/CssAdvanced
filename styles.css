@@ -393,7 +393,7 @@ select::placeholder {
 
 .header__cta {
   display: grid;
-  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-columns: 20% .3fr auto auto auto auto;
   position: relative;
   top: -60px;
   align-items: center;
@@ -402,6 +402,22 @@ select::placeholder {
   background: white;
   height: 112px;
   grid-column-gap: 2rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 1199px) {
+  .header__cta {
+    grid-template-columns: 20% 0% auto auto auto auto;
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .header__cta {
+    grid-template-columns: repeat(auto-fit, 100%);
+    grid-gap: 1.5rem;
+    height: auto;
+  }
 }
 
 .header__enroll-btn {
@@ -414,6 +430,22 @@ select::placeholder {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   grid-column-gap: 2rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1199px) {
+  .header__item {
+    font-size: 0.9rem;
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .header__item {
+    justify-content: start;
+    font-size: 1.5rem;
+    grid-column-gap: 2rem;
+  }
 }
 
 .header__image {
@@ -435,6 +467,8 @@ select::placeholder {
   grid-row-start: 2;
   grid-column-start: 2;
   justify-self: left;
+  font-weight: bold;
+  color: #FF9100;
 }
 
 .header__border {
@@ -443,6 +477,19 @@ select::placeholder {
   grid-row-end: 3;
   grid-column-start: 3;
   justify-self: center;
+}
+
+@media (max-width: 799px) {
+  .header__border {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 100%;
+    height: 2px;
+    background: #F1F1F1;
+    margin-top: 1rem;
+  }
 }
 
 .header__title {
@@ -619,21 +666,60 @@ select::placeholder {
   justify-content: space-between;
 }
 
+@media (max-width: 1199px) {
+  .description {
+    grid-column-gap: 0;
+  }
+}
+
+@media (max-width: 799px) {
+  .description {
+    grid-template-columns: repeat(auto-fit, 100%);
+    height: auto;
+  }
+}
+
 .description__images {
   position: relative;
 }
 
 .description__image--main {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 799px) {
+  .description__image--main {
+    transform: translate(0, 0);
+    position: static;
+  }
 }
 
 .description__image--positioned {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .course-cards {
   display: flex;
   flex-flow: row;
+}
+
+@media (max-width: 1199px) {
+  .course-cards {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 799px) {
+  .course-cards {
+    flex-flow: column;
+  }
 }
 
 .course-card {
@@ -643,13 +729,35 @@ select::placeholder {
   grid-template-columns: 4rem auto;
 }
 
+@media (max-width: 799px) {
+  .course-card {
+    width: 100%;
+  }
+}
+
 .course-card:first-child {
   padding-right: 4rem;
+}
+
+@media (max-width: 799px) {
+  .course-card:first-child {
+    padding-right: 0;
+    padding-bottom: 4rem;
+  }
 }
 
 .course-card:last-child {
   border-left: 12px dotted #FFECB3;
   padding-left: 4rem;
+}
+
+@media (max-width: 799px) {
+  .course-card:last-child {
+    border-left: 0;
+    border-top: 12px dotted #FFECB3;
+    padding-left: 0;
+    padding-top: 4rem;
+  }
 }
 
 .course-card__icon {
@@ -688,6 +796,20 @@ select::placeholder {
   padding: 3rem 0;
 }
 
+@media (max-width: 1199px) {
+  .program {
+    grid-template-columns: 5% 90%;
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .program {
+    grid-template-columns: 10% 90%;
+    grid-gap: 0rem;
+  }
+}
+
 .program__heading {
   margin-top: 0;
 }
@@ -702,6 +824,19 @@ select::placeholder {
   grid-column: -1;
   justify-self: end;
   align-self: end;
+}
+
+@media (max-width: 1199px) {
+  .program__image {
+    grid-row: 4;
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 799px) {
+  .program__image {
+    display: none;
+  }
 }
 
 .program__form {
@@ -813,6 +948,12 @@ select::placeholder {
   grid-template-columns: 4rem 1fr 1fr;
 }
 
+@media (max-width: 799px) {
+  .certificate {
+    grid-template-columns: 10% 90%;
+  }
+}
+
 .certificate__icon {
   align-self: end;
 }
@@ -838,6 +979,14 @@ select::placeholder {
   position: relative;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+}
+
+@media (max-width: 799px) {
+  .certificate__image {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+  }
 }
 
 .cards {

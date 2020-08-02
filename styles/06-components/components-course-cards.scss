@@ -2,6 +2,12 @@
 .course-cards {
     display: flex;
     flex-flow: row;
+    @include for-desktop-down {
+        margin: 0 auto;
+    }
+    @include for-tablet-landscape-down {
+        flex-flow: column;
+    }
 }
 
 .course-card {
@@ -9,12 +15,25 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 4rem auto;
+    @include for-tablet-landscape-down {
+        width: 100%;
+    }
     &:first-child {
         padding-right: 4rem;
+        @include for-tablet-landscape-down {
+            padding-right: 0;
+            padding-bottom: 4rem;
+        }
     }
     &:last-child {
         border-left: 12px dotted $secondary-100;
         padding-left: 4rem;
+        @include for-tablet-landscape-down {
+            border-left: 0;
+            border-top: 12px dotted $secondary-100;
+            padding-left: 0;
+            padding-top: 4rem;
+        }
     }
     &__icon {
         grid-column-start: 1;

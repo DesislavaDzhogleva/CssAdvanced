@@ -8,6 +8,14 @@
     grid-template-columns: 5% 55% auto;
     grid-template-rows: auto auto auto;
     padding: 3rem 0;
+    @include for-desktop-down {
+        grid-template-columns: 5% 90%;
+        grid-gap: 0.5rem;
+    }
+    @include for-tablet-landscape-down {
+        grid-template-columns: 10% 90%;
+        grid-gap: 0rem;
+    }
     &__heading {
         margin-top: 0;
     }
@@ -20,6 +28,13 @@
         grid-column: -1;
         justify-self: end;
         align-self: end;
+        @include for-desktop-down {
+            grid-row: 4;
+            grid-column: 2;
+        }
+        @include for-tablet-landscape-down {
+            display: none;
+        }
     }
     &__form {
         grid-column: 2;

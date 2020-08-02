@@ -2,6 +2,9 @@
 .certificate {
     display: grid;
     grid-template-columns: 4rem 1fr 1fr;
+    @include for-tablet-landscape-down {
+        grid-template-columns: 10% 90%;
+    }
     &__icon {
         align-self: end;
     }
@@ -16,13 +19,20 @@
     &__image {
         grid-column: 3;
         grid-row: 1/ span 2;
+        @include for-tablet-landscape-down {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+        }
         justify-self: end;
         margin-right: 3rem;
         background-color: $grey-300;
         width: 350px;
         height: 250px;
         position: relative;
-        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14),
+        0px 2px 2px rgba(0, 0, 0, 0.12),
+        0px 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
     }
 }
