@@ -8,6 +8,9 @@
     position: relative;
     min-height: 310px;
     padding-left: 100px;
+    @include for-desktop-down {
+        padding-left: 0;
+    }
     &--wrapper {
         background: $grey-700;
         border-top: 10px solid $grey-500;
@@ -17,17 +20,28 @@
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 200px;
         grid-gap: 3rem;
+        @include for-desktop-down {
+            padding-left: 3rem;
+        }
     }
     .footer__image {
         position: absolute;
         bottom: 0;
         left: 0;
+        @include for-desktop-down {
+            display: none;
+        }
     }
     .footer__section {
         grid-gap: 1rem;
         .footer__heading {
             color: white;
             margin-bottom: 1rem;
+            &--social {
+                @include for-tablet-landscape-down {
+                    display: none;
+                }
+            }
         }
         .footer__nav {
             list-style-type: none;
@@ -36,6 +50,9 @@
             grid-template-rows: repeat(5, auto);
             padding: 0;
             grid-gap: 1rem;
+            @include for-tablet-landscape-down {
+                display: block;
+            }
             &--horizontal {
                 grid-auto-flow: row;
                 grid-template: repeat(2, auto);
@@ -63,6 +80,36 @@
         }
         .footer__copyright {
             color: $grey-500;
+        }
+    }
+    @include for-tablet-landscape-down {
+        .footer__content {
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            padding: 0;
+            grid-gap: 0;
+        }
+        .footer__softuni-kids {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+        .footer__initiative {
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+        .footer__educatio {
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
+        .footer__find-us {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            border-top: 1px solid #696969;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            text-align: center;
         }
     }
 }

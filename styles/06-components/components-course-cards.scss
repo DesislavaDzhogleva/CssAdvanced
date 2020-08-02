@@ -1,4 +1,5 @@
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-breakpoints.scss';
 .course-cards {
     display: flex;
     flex-flow: row;
@@ -55,5 +56,10 @@
         grid-column-start: 2;
         grid-row-start: 2;
         margin: 0;
+        @include for-tablet-landscape-down {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+        }
     }
 }

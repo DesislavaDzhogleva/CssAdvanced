@@ -1,4 +1,5 @@
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-breakpoints.scss';
 .header {
     &__info {
         background: $blue-400;
@@ -94,6 +95,10 @@
         font-size: 2.2rem;
         width: 50%;
         color: white;
+        @include for-tablet-landscape-down {
+            font-size: 1.8rem;
+            width: auto;
+        }
     }
     &__label {
         font-size: 12px;

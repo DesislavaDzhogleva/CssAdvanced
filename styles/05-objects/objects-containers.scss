@@ -1,4 +1,8 @@
+@import '../01-settings/settings-breakpoints.scss';
 .content--wrapper {
     width: 90vw;
     margin: 0 auto;
+    @include for-tablet-landscape-down {
+        margin: 0 6.5vw;
+    }
 }

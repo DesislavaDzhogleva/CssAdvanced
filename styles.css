@@ -354,9 +354,20 @@ select::placeholder {
   color: #919191;
 }
 
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .content--wrapper {
   width: 90vw;
   margin: 0 auto;
+}
+
+@media (max-width: 799px) {
+  .content--wrapper {
+    margin: 0 6.5vw;
+  }
 }
 
 .centered {
@@ -377,6 +388,11 @@ select::placeholder {
   width: fit-content;
 }
 
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .header__info {
   background: #44A9F8;
   color: white;
@@ -496,6 +512,13 @@ select::placeholder {
   font-size: 2.2rem;
   width: 50%;
   color: white;
+}
+
+@media (max-width: 799px) {
+  .header__title {
+    font-size: 1.8rem;
+    width: auto;
+  }
 }
 
 .header__label {
@@ -705,6 +728,11 @@ select::placeholder {
   transform: translate(-50%, -50%);
 }
 
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .course-cards {
   display: flex;
   flex-flow: row;
@@ -783,6 +811,14 @@ select::placeholder {
   grid-column-start: 2;
   grid-row-start: 2;
   margin: 0;
+}
+
+@media (max-width: 799px) {
+  .course-card__content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
 }
 
 .programs {
@@ -875,6 +911,12 @@ select::placeholder {
   padding-left: 100px;
 }
 
+@media (max-width: 1199px) {
+  .footer {
+    padding-left: 0;
+  }
+}
+
 .footer--wrapper {
   background: #565656;
   border-top: 10px solid #919191;
@@ -887,10 +929,22 @@ select::placeholder {
   grid-gap: 3rem;
 }
 
+@media (max-width: 1199px) {
+  .footer .footer__content {
+    padding-left: 3rem;
+  }
+}
+
 .footer .footer__image {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+@media (max-width: 1199px) {
+  .footer .footer__image {
+    display: none;
+  }
 }
 
 .footer .footer__section {
@@ -902,6 +956,12 @@ select::placeholder {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 799px) {
+  .footer .footer__section .footer__heading--social {
+    display: none;
+  }
+}
+
 .footer .footer__section .footer__nav {
   list-style-type: none;
   display: grid;
@@ -909,6 +969,12 @@ select::placeholder {
   grid-template-rows: repeat(5, auto);
   padding: 0;
   grid-gap: 1rem;
+}
+
+@media (max-width: 799px) {
+  .footer .footer__section .footer__nav {
+    display: block;
+  }
 }
 
 .footer .footer__section .footer__nav--horizontal {
@@ -943,6 +1009,42 @@ select::placeholder {
   color: #919191;
 }
 
+@media (max-width: 799px) {
+  .footer .footer__content {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 0;
+    grid-gap: 0;
+  }
+  .footer .footer__softuni-kids {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .footer .footer__initiative {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .footer .footer__educatio {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .footer .footer__find-us {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    border-top: 1px solid #696969;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .certificate {
   display: grid;
   grid-template-columns: 4rem 1fr 1fr;
@@ -950,7 +1052,7 @@ select::placeholder {
 
 @media (max-width: 799px) {
   .certificate {
-    grid-template-columns: 10% 90%;
+    display: none;
   }
 }
 
@@ -986,6 +1088,15 @@ select::placeholder {
     grid-column: 2;
     grid-row: 3;
     justify-self: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .certificate__image {
+    width: 100%;
+    margin-right: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 

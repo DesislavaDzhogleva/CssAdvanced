@@ -1,4 +1,15 @@
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .content--wrapper {
   width: 90vw;
   margin: 0 auto;
+}
+
+@media (max-width: 799px) {
+  .content--wrapper {
+    margin: 0 6.5vw;
+  }
 }

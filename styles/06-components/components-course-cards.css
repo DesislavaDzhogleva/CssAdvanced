@@ -1,6 +1,23 @@
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .course-cards {
   display: flex;
   flex-flow: row;
+}
+
+@media (max-width: 1199px) {
+  .course-cards {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 799px) {
+  .course-cards {
+    flex-flow: column;
+  }
 }
 
 .course-card {
@@ -10,13 +27,35 @@
   grid-template-columns: 4rem auto;
 }
 
+@media (max-width: 799px) {
+  .course-card {
+    width: 100%;
+  }
+}
+
 .course-card:first-child {
   padding-right: 4rem;
+}
+
+@media (max-width: 799px) {
+  .course-card:first-child {
+    padding-right: 0;
+    padding-bottom: 4rem;
+  }
 }
 
 .course-card:last-child {
   border-left: 12px dotted #FFECB3;
   padding-left: 4rem;
+}
+
+@media (max-width: 799px) {
+  .course-card:last-child {
+    border-left: 0;
+    border-top: 12px dotted #FFECB3;
+    padding-left: 0;
+    padding-top: 4rem;
+  }
 }
 
 .course-card__icon {
@@ -42,4 +81,12 @@
   grid-column-start: 2;
   grid-row-start: 2;
   margin: 0;
+}
+
+@media (max-width: 799px) {
+  .course-card__content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
 }
