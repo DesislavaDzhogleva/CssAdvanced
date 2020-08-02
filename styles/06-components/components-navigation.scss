@@ -14,17 +14,18 @@
     &__links {
         display: flex;
         align-items: center;
-        @include for-desktop-up {
-            flex-flow: row-reverse;
+        flex-flow: row-reverse;
+        @include for-desktop-down {
+            flex-flow: row;
         }
     }
     &__items {
-        display: none;
-        @include for-desktop-up {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        list-style: none;
+        @include for-desktop-down {
+            display: none;
         }
     }
     &__item {
@@ -33,6 +34,7 @@
         line-height: 16px;
         color: $grey-700;
         text-transform: uppercase;
+        font-weight: 600;
         &:hover {
             cursor: pointer;
             color: $secondary-800;
@@ -42,21 +44,21 @@
         cursor: pointer;
         padding: 28px 20px;
         position: relative;
-        display: inline-block;
         z-index: 15;
-        @include for-desktop-up {
-            display: none;
+        display: none;
+        @include for-desktop-down {
+            display: inline-block;
         }
     }
     &__navicon {
         background: #333;
-        display: block;
         height: 2px;
         position: relative;
         transition: background .2s ease-out;
         width: 18px;
-        @include for-desktop-up {
-            display: none;
+        display: none;
+        @include for-desktop-down {
+            display: block;
         }
         &:before,
         &:after {

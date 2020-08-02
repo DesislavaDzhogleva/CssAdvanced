@@ -1,0 +1,40 @@
+@import '../01-settings/settings-colors.scss';
+.course-cards {
+    display: flex;
+    flex-flow: row;
+}
+
+.course-card {
+    width: 50%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 4rem auto;
+    &:first-child {
+        padding-right: 4rem;
+    }
+    &:last-child {
+        border-left: 12px dotted $secondary-100;
+        padding-left: 4rem;
+    }
+    &__icon {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        margin: 0;
+        padding: 0;
+    }
+    &__heading {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        margin: 0;
+        padding: 0;
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__content {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        margin: 0;
+    }
+}

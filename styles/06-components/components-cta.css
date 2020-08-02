@@ -1,0 +1,45 @@
+.cta {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+.cta--wrapper {
+  background-color: #66B9F8;
+}
+
+.cta__title {
+  color: white;
+  margin: 0;
+}
+
+.cta__subtitle {
+  color: white;
+}
+
+.cta__form {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 32px;
+  padding-top: 1rem;
+}
+
+.cta__element {
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: white;
+  background: transparent;
+  padding: 16px;
+}
+
+.cta__element::placeholder {
+  color: white;
+}
+
+.cta__button {
+  grid-column: -1;
+}

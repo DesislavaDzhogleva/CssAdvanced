@@ -1,0 +1,39 @@
+@import '../01-settings/settings-colors.scss';
+.cta {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 1.5rem;
+    &--wrapper {
+        background-color: $blue-300;
+    }
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    &__title {
+        color: white;
+        margin: 0;
+    }
+    &__subtitle {
+        color: white;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 32px;
+        padding-top: 1rem;
+    }
+    &__element {
+        border: 1px solid white;
+        box-sizing: border-box;
+        border-radius: 6px;
+        color: white;
+        background: transparent;
+        padding: 16px;
+        &::placeholder {
+            color: white;
+        }
+    }
+    &__button {
+        grid-column: -1;
+    }
+}

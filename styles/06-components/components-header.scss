@@ -1,9 +1,19 @@
 @import '../01-settings/settings-colors.scss';
 .header {
+    &__info {
+        background: $blue-400;
+        color: white;
+        padding: 64px 0;
+        &--orange {
+            background-color: $secondary-600;
+        }
+        &--small {
+            padding: 3rem;
+        }
+    }
     &__cta {
         display: grid;
-        grid-template-columns: 1fr 18% 18% 18% 1fr;
-        justify-items: center;
+        grid-template-columns: 1fr auto auto auto 1fr;
         position: relative;
         top: -60px;
         align-items: center;
@@ -11,35 +21,42 @@
         border-radius: 12px;
         background: white;
         height: 112px;
+        grid-column-gap: 2rem;
+    }
+    &__enroll-btn {
+        justify-self: center;
     }
     &__item {
         display: grid;
         text-align: center;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        grid-column-gap: 1rem;
-        .header__image {
-            grid-column-start: 1;
-            grid-row-start: 1;
-            grid-row-end: 3;
-        }
-        .header__subtext {
-            text-align: left;
-            grid-row-start: 1;
-            grid-column-start: 2;
-        }
-        .header__text {
-            text-align: left;
-            grid-row-start: 2;
-            grid-column-start: 2;
-        }
-        .header__border {
-            border-right: 1px solid $grey-100;
-            grid-row-start: 1;
-            grid-row-end: 3;
-            grid-column-start: 3;
-            margin: 0rem 1rem;
-        }
+        grid-column-gap: 2rem;
+    }
+    &__image {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        justify-self: right;
+    }
+    &__subtext {
+        text-align: left;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        justify-self: left;
+    }
+    &__text {
+        text-align: left;
+        grid-row-start: 2;
+        grid-column-start: 2;
+        justify-self: left;
+    }
+    &__border {
+        border-right: 1px solid $grey-100;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        justify-self: center;
     }
     &__title {
         font-size: 2.2rem;
@@ -56,9 +73,8 @@
         text-transform: uppercase;
         color: white;
     }
-    &__info {
-        background: $blue-400;
+    &__paragraph {
         color: white;
-        padding: 64px 0;
+        width: 70%;
     }
 }
