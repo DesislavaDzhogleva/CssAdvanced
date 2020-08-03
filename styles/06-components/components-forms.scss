@@ -1,0 +1,31 @@
+.contacts-form {
+    &__title {
+        color: $primary-300;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 30px;
+        width: 50%;
+    }
+    &__element {
+        padding: 1rem;
+        color: $grey-500;
+        border: 1px solid $grey-500;
+        border-radius: 6px;
+        &#email {
+            grid-column: 2;
+        }
+        &#message {
+            grid-row: 2;
+            grid-column: 1/span 2;
+            min-height: 200px;
+        }
+    }
+    &__button {
+        grid-row: 3;
+        justify-self: start;
+        margin-top: 2px;
+    }
+}

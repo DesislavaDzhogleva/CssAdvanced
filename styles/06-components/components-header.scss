@@ -1,6 +1,11 @@
 @import '../01-settings/settings-colors.scss';
 @import '../01-settings/settings-breakpoints.scss';
 .header {
+    &--map {
+        background: url('assets/Map.svg') center no-repeat;
+        background-size: cover;
+        margin-bottom: 10rem;
+    }
     &__info {
         background: $blue-400;
         color: white;

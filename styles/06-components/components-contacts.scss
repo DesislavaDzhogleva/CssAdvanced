@@ -1,0 +1,67 @@
+@import '../01-settings/settings-colors.scss';
+.contacts {
+    width: 520px;
+    grid-template-columns: auto auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    column-gap: 1.8rem;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+    padding: 2rem;
+    background: white;
+    &--wrapper {
+        left: 5vw;
+        position: relative;
+        top: 130px;
+    }
+    &__button {
+        grid-row: 3;
+        grid-column: 1/span 2;
+        justify-self: center;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        color: $primary-300;
+    }
+    &__info {
+        color: $grey-700;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__buisness-hours {
+        color: $secondary-800;
+    }
+}
+
+.contacts-form {
+    &__title {
+        color: $primary-300;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: 30px;
+        width: 50%;
+    }
+    &__element {
+        padding: 1rem;
+        color: $grey-500;
+        border: 1px solid $grey-500;
+        border-radius: 6px;
+        &#email {
+            grid-column: 2;
+        }
+        &#message {
+            grid-row: 2;
+            grid-column: 1/span 2;
+            min-height: 200px;
+        }
+    }
+    &__button {
+        grid-row: 3;
+        justify-self: start;
+        margin-top: 2px;
+    }
+}

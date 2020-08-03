@@ -21,6 +21,15 @@
   font-size: 13px;
 }
 
+.btn--additional {
+  font-size: 14px;
+  background: white;
+  color: #FF9100;
+  box-shadow: none;
+  border: 1px solid #FF9100;
+  margin: 2px;
+}
+
 .btn--medium {
   font-size: 16px;
 }

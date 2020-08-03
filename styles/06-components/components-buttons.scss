@@ -17,6 +17,14 @@
     &--small {
         font-size: 13px;
     }
+    &--additional {
+        font-size: 14px;
+        background: white;
+        color: $secondary-800;
+        box-shadow: none;
+        border: 1px solid $secondary-800;
+        margin: 2px;
+    }
     &--medium {
         font-size: 16px;
     }

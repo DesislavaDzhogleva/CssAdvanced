@@ -67,6 +67,9 @@
                         color: $primary-300;
                     }
                 }
+                @include for-tablet-landscape-down {
+                    padding-bottom: 1rem;
+                }
             }
         }
         .footer__social {

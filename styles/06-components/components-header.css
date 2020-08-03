@@ -3,6 +3,12 @@
         @content;
     }
 }*/
+.header--map {
+  background: url("assets/Map.svg") center no-repeat;
+  background-size: cover;
+  margin-bottom: 10rem;
+}
+
 .header__info {
   background: #44A9F8;
   color: white;
