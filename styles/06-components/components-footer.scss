@@ -7,33 +7,33 @@
     align-items: center;
     position: relative;
     min-height: 310px;
-    padding-left: 100px;
     @include for-desktop-down {
         padding-left: 0;
-    }
-    @include for-small-laptop-down {
         margin: 0;
     }
     &--wrapper {
         background: $grey-700;
         border-top: 10px solid $grey-500;
     }
-    .footer__content {
-        padding-left: 180px;
+    &__content {
+        padding-left: 17rem;
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 200px;
-        grid-gap: 3rem;
+        column-gap: 4vw;
         @include for-desktop-down {
             padding-left: 3rem;
+        }
+        @include for-small-laptop-down {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         @include for-tablet-landscape-down {
             grid-template-columns: 1fr 1fr;
             width: 100%;
-            padding: 5vw;
+            padding: 0 5vw;
             grid-gap: 0;
         }
     }
-    .footer__image {
+    &__image {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -41,90 +41,91 @@
             display: none;
         }
     }
-    .footer__section {
+    &__section {
         grid-gap: 1rem;
-        .footer__heading {
-            color: white;
-            margin-bottom: 1rem;
-            &--social {
-                @include for-tablet-landscape-down {
-                    display: none;
-                }
-            }
-        }
-        .footer__nav {
-            list-style-type: none;
-            display: grid;
-            grid-auto-flow: column;
-            grid-template-rows: repeat(5, auto);
-            padding: 0;
-            grid-gap: 1rem;
+        &--softuni-kids {
             @include for-tablet-landscape-down {
-                display: block;
-            }
-            @include for-small-laptop-down {
-                grid-template-rows: repeat(7, auto);
-            }
-            &--horizontal {
-                grid-auto-flow: row;
-                grid-template: repeat(2, auto);
-            }
-            .footer__nav-item {
-                font-size: 16px;
-                color: $grey-200;
-                font-weight: normal;
-                a {
-                    line-height: 19px;
-                    &:hover {
-                        color: $primary-300;
-                    }
-                }
-                @include for-tablet-landscape-down {
-                    padding-bottom: 1rem;
-                }
+                grid-column-start: 1;
+                grid-row-start: 1;
             }
         }
-        .footer__social {
-            .footer__social-item {
-                color: $grey-200;
-                font-size: 2rem;
+        &--initiative {
+            @include for-tablet-landscape-down {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+        }
+        &--education {
+            @include for-tablet-landscape-down {
+                grid-column-start: 1;
+                grid-row-start: 2;
+            }
+        }
+        &--find-us {
+            @include for-tablet-landscape-down {}
+        }
+    }
+    &__heading {
+        color: white;
+        margin-bottom: 1rem;
+        &--social {
+            @include for-tablet-landscape-down {
+                display: none;
+            }
+        }
+    }
+    &__nav {
+        list-style-type: none;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, auto);
+        padding: 0;
+        grid-gap: 1rem;
+        @include for-tablet-landscape-down {
+            display: block;
+            margin: 0;
+        }
+        @include for-small-laptop-down {
+            grid-template-rows: repeat(7, auto);
+        }
+        &--horizontal {
+            grid-auto-flow: row;
+            grid-template: repeat(2, auto);
+        }
+        .footer__nav-item {
+            font-size: 16px;
+            color: $grey-200;
+            font-weight: normal;
+            a {
+                line-height: 19px;
                 &:hover {
                     color: $primary-300;
                 }
             }
-        }
-        .footer__copyright {
-            color: $grey-500;
+            @include for-tablet-landscape-down {
+                padding-bottom: 1rem;
+            }
         }
     }
-    @include for-tablet-landscape-down {
-        // .footer__content {
-        //     grid-template-columns: 1fr 1fr;
-        //     width: 100%;
-        //     padding: 0;
-        //     grid-gap: 0;
-        // }
-        // .footer__softuni-kids {
-        //     grid-column-start: 1;
-        //     grid-row-start: 1;
-        // }
-        // .footer__initiative {
-        //     grid-column-start: 2;
-        //     grid-row-start: 1;
-        // }
-        // .footer__educatio {
-        //     grid-column-start: 1;
-        //     grid-row-start: 2;
-        // }
-        // .footer__find-us {
-        //     grid-column-start: 1;
-        //     grid-column-end: 3;
-        //     grid-row-start: 3;
-        //     border-top: 1px solid #696969;
-        //     margin-top: 2rem;
-        //     padding-top: 2rem;
-        //     padding-bottom: 2rem;
-        //     text-align: center;
-        // }
+    &__social {
+        &-item {
+            color: $grey-200;
+            font-size: 2rem;
+            margin-right: 1.8rem;
+            &:hover {
+                color: $primary-300;
+            }
+        }
+    }
+    &__copyright {
+        margin-top: 2rem;
+        color: $grey-500;
+        @include for-tablet-landscape-down {
+            border-top: 1px solid #696969;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            text-align: center;
+        }
     }
 }
