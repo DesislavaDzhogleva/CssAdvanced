@@ -1,10 +1,16 @@
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
 .cta {
   display: grid;
   justify-content: center;
-  justify-items: center;
   grid-gap: 1.5rem;
   padding-top: 4rem;
   padding-bottom: 8rem;
+  margin: 0 auto;
+  width: 90vw;
 }
 
 .cta--wrapper {
@@ -14,10 +20,18 @@
 .cta__title {
   color: white;
   margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cta__title {
+    font-size: 24px;
+  }
 }
 
 .cta__subtitle {
   color: white;
+  text-align: center;
 }
 
 .cta__form {
@@ -25,6 +39,12 @@
   grid-template-columns: repeat(4, auto);
   grid-gap: 32px;
   padding-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta__element {
@@ -38,8 +58,4 @@
 
 .cta__element::placeholder {
   color: white;
-}
-
-.cta__button {
-  grid-column: -1;
 }

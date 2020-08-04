@@ -1,0 +1,40 @@
+/*@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}*/
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .cards-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 799px) {
+  .cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cards-list .card-preview {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  grid-gap: 0.5rem;
+}
+
+.cards-list .card-preview__title {
+  color: #41BEAD;
+  margin: 0;
+}
+
+.cards-list .card-preview__subtitle {
+  color: #B2B2B2;
+  margin: 0.5rem 0;
+}

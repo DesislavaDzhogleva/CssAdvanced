@@ -1,26 +1,36 @@
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-breakpoints.scss';
 .cta {
     display: grid;
     justify-content: center;
-    justify-items: center;
     grid-gap: 1.5rem;
     &--wrapper {
         background-color: $blue-300;
     }
     padding-top: 4rem;
     padding-bottom: 8rem;
+    margin: 0 auto;
+    width: 90vw;
     &__title {
         color: white;
         margin: 0;
+        text-align: center;
+        @include for-small-laptop-down {
+            font-size: 24px;
+        }
     }
     &__subtitle {
         color: white;
+        text-align: center;
     }
     &__form {
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-gap: 32px;
         padding-top: 1rem;
+        @include for-small-laptop-down {
+            grid-template-columns: 1fr;
+        }
     }
     &__element {
         border: 1px solid white;
@@ -32,8 +42,5 @@
         &::placeholder {
             color: white;
         }
-    }
-    &__button {
-        grid-column: -1;
     }
 }

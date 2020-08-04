@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     background: white;
+    justify-items: end;
     &--container {
         background: white;
     }

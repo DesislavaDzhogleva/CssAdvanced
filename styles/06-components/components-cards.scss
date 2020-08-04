@@ -1,20 +1,43 @@
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-breakpoints.scss';
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 2rem;
+    @include for-desktop-down {
+        grid-template-columns: auto;
+    }
     .card {
         display: grid;
         grid-gap: 1rem;
         grid-column-gap: 2rem;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto;
-        &__content {
-            grid-column: 2;
+        @include for-tablet-landscape-down {
+            justify-items: center;
+            grid-template-columns: 1fr;
         }
         &__picture {
             grid-row: 1/ span 2;
+            // & img {
+            //     width: 11vw;
+            // }
+            @include for-tablet-landscape-down {
+                grid-row: 1;
+            }
+        }
+        &__header {
+            @include for-tablet-landscape-down {
+                grid-row: 2;
+            }
+        }
+        &__content {
+            grid-column: 2;
+            @include for-tablet-landscape-down {
+                grid-row: 3;
+                grid-column: 1;
+            }
         }
         &__title {
             margin-top: 0;
@@ -26,27 +49,6 @@
         }
         &__paragraph {
             margin: 0;
-        }
-    }
-}
-
-.cards-list {
-    display: grid;
-    grid-template-columns: repeat( 4, 1fr);
-    justify-items: center;
-    grid-gap: 1rem;
-    .card-preview {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        justify-items: center;
-        grid-gap: 0.5rem;
-        &__title {
-            color: $primary-300;
-            margin: 0;
-        }
-        &__subtitle {
-            color: $grey-400;
-            margin: 0.5rem 0;
         }
     }
 }

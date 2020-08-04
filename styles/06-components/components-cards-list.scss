@@ -1,0 +1,28 @@
+@import '../01-settings/settings-breakpoints.scss';
+@import '../01-settings/settings-colors.scss';
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+    justify-items: center;
+    grid-gap: 1rem;
+    @include for-small-laptop-down {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include for-tablet-landscape-down {
+        grid-template-columns: 1fr;
+    }
+    .card-preview {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        grid-gap: 0.5rem;
+        &__title {
+            color: $primary-300;
+            margin: 0;
+        }
+        &__subtitle {
+            color: $grey-400;
+            margin: 0.5rem 0;
+        }
+    }
+}
