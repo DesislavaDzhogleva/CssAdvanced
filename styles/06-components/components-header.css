@@ -152,3 +152,9 @@
   color: white;
   width: 70%;
 }
+
+@media (max-width: 799px) {
+  .header__paragraph {
+    width: auto;
+  }
+}

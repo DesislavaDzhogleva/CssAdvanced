@@ -26,12 +26,20 @@
 @media (max-width: 1024px) {
   .cta__title {
     font-size: 24px;
+    line-height: 30px;
+    text-align: left;
   }
 }
 
 .cta__subtitle {
   color: white;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cta__subtitle {
+    text-align: left;
+  }
 }
 
 .cta__form {
@@ -58,4 +66,16 @@
 
 .cta__element::placeholder {
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .cta__button {
+    justify-self: left;
+  }
+}
+
+@media (max-width: 799px) {
+  .cta__button {
+    justify-self: auto;
+  }
 }

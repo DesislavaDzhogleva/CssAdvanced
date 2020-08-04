@@ -3,9 +3,8 @@
 }
 
 .centered__container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
 }
 
 .centered__position {

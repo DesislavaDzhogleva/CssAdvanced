@@ -372,9 +372,8 @@ select::placeholder {
 }
 
 .centered__container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .centered__position {
@@ -538,6 +537,12 @@ select::placeholder {
 .header__paragraph {
   color: white;
   width: 70%;
+}
+
+@media (max-width: 799px) {
+  .header__paragraph {
+    width: auto;
+  }
 }
 
 .btn {
@@ -1220,12 +1225,20 @@ select::placeholder {
 @media (max-width: 1024px) {
   .cta__title {
     font-size: 24px;
+    line-height: 30px;
+    text-align: left;
   }
 }
 
 .cta__subtitle {
   color: white;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cta__subtitle {
+    text-align: left;
+  }
 }
 
 .cta__form {
@@ -1252,6 +1265,18 @@ select::placeholder {
 
 .cta__element::placeholder {
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .cta__button {
+    justify-self: left;
+  }
+}
+
+@media (max-width: 799px) {
+  .cta__button {
+    justify-self: auto;
+  }
 }
 
 .contacts {
