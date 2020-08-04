@@ -1,6 +1,6 @@
 .site {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
     row-gap: 96px;
 }
 
