@@ -1,7 +1,8 @@
 select {
   background: #F8F8F8;
   border: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-appearance: none;
   margin-bottom: 1rem;
   width: 100%;
@@ -15,6 +16,19 @@ select:hover {
   cursor: pointer;
 }
 
+select::-webkit-input-placeholder {
+  color: #919191;
+}
+
+select:-ms-input-placeholder {
+  color: #919191;
+}
+
+select::-ms-input-placeholder {
+  color: #919191;
+}
+
 select::placeholder {
   color: #919191;
 }
+/*# sourceMappingURL=elements-input-fields.css.map */

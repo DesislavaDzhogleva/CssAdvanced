@@ -4,8 +4,11 @@
     }
 }*/
 .cta {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 1.5rem;
   padding-top: 4rem;
   padding-bottom: 8rem;
@@ -43,25 +46,41 @@
 }
 
 .cta__form {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
   grid-gap: 32px;
   padding-top: 1rem;
 }
 
 @media (max-width: 1024px) {
   .cta__form {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
 .cta__element {
   border: 1px solid white;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 6px;
   color: white;
   background: transparent;
   padding: 16px;
+}
+
+.cta__element::-webkit-input-placeholder {
+  color: white;
+}
+
+.cta__element:-ms-input-placeholder {
+  color: white;
+}
+
+.cta__element::-ms-input-placeholder {
+  color: white;
 }
 
 .cta__element::placeholder {
@@ -70,12 +89,15 @@
 
 @media (max-width: 1024px) {
   .cta__button {
-    justify-self: left;
+    -ms-grid-column-align: left;
+        justify-self: left;
   }
 }
 
 @media (max-width: 799px) {
   .cta__button {
-    justify-self: auto;
+    -ms-grid-column-align: auto;
+        justify-self: auto;
   }
 }
+/*# sourceMappingURL=components-cta.css.map */

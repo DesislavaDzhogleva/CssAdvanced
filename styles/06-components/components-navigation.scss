@@ -1,3 +1,5 @@
+@import '../01-settings/settings-breakpoints.scss';
+@import '../01-settings/settings-colors.scss';
 .navigation {
     // display: flex;
     // justify-content: space-between;
@@ -22,7 +24,7 @@
         display: flex;
         align-items: center;
         flex-flow: row-reverse;
-        @include for-desktop-down {
+        @include for-small-laptop-down {
             flex-flow: row;
         }
     }
@@ -31,20 +33,37 @@
         align-items: center;
         margin: 0;
         list-style: none;
-        @include for-desktop-down {
-            display: none;
+        @include for-small-laptop-down {
+            display: grid;
+            position: absolute;
+            background: white;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            grid-gap: 1rem;
+            transform: translate(100%, -100%);
+            border-radius: 200%;
+            transition: transform 1s ease-in-out, border-radius 1s ease-in-out;
         }
     }
     &__item {
         padding: 2rem 0.8rem;
         font-size: 13px;
-        line-height: 16px;
         color: $grey-700;
         text-transform: uppercase;
         font-weight: bold;
         &:hover {
             cursor: pointer;
             color: $secondary-800;
+        }
+        @include for-small-laptop-down {
+            font-size: 2rem;
+            padding: 0;
         }
     }
     &__menu-icon {
@@ -53,7 +72,7 @@
         position: relative;
         z-index: 15;
         display: none;
-        @include for-desktop-down {
+        @include for-small-laptop-down {
             display: inline-block;
         }
     }
@@ -64,7 +83,7 @@
         transition: background .2s ease-out;
         width: 18px;
         display: none;
-        @include for-desktop-down {
+        @include for-small-laptop-down {
             display: block;
         }
         &:before,
@@ -86,14 +105,24 @@
     }
     .navigation__menu-btn {
         display: none;
+        &:checked~.navigation__items {
+            transform: translate(0, 0);
+            border-radius: 0;
+            transition: transform 1s ease-in-out, border-radius 1s ease-in-out;
+        }
+        &:checked~.navigation__menu-icon .navigation__navicon {
+            background: transparent;
+            &:before {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+            &:after {
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
     }
-    // /* menu btn */
-    // .navigation__menu-btn {
-    //     display: none;
-    // }
-    // .navigation__menu-btn:checked~.navigation__items {
-    //     display: flex;
-    // }
+    // .navigation__menu-btn:checked~.navigation__items {}
     // .navigation__menu-btn:checked~.navigation__menu-icon .navigation__navicon {
     //     background: transparent;
     // }

@@ -3,6 +3,7 @@
 }
 
 .centered__container {
+  display: -ms-grid;
   display: grid;
   justify-items: center;
 }
@@ -11,6 +12,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
+/*# sourceMappingURL=utilities-centered.css.map */
