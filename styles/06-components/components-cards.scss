@@ -30,6 +30,7 @@
         &__header {
             @include for-tablet-landscape-down {
                 grid-row: 2;
+                text-align: center;
             }
         }
         &__content {

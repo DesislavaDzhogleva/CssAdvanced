@@ -1,25 +1,18 @@
 .site {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr auto;
-      grid-template-rows: 1fr 1fr auto;
-  row-gap: 96px;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 6rem;
 }
 
 .main {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[6];
-      grid-template-rows: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
   row-gap: 5rem;
 }
 
 .main-trainers {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   row-gap: 5rem;
   padding-top: 5rem;
 }
-/*# sourceMappingURL=components-grid.css.map */

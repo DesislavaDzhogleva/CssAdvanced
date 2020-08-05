@@ -1,4 +1,6 @@
+@import '../01-settings/settings-colors.scss';
 .contacts-form {
+    padding: 6rem 0;
     &__title {
         color: $primary-300;
     }

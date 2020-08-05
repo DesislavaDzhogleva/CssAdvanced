@@ -1,0 +1,19 @@
+@import '../01-settings/settings-colors.scss';
+.additional-info {
+    background: $secondary-50;
+    display: grid;
+    justify-items: center;
+    padding: 6rem 0;
+    &__heading {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: $primary-300;
+    }
+    &__title {
+        color: $primary-300;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
