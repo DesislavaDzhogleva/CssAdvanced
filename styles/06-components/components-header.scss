@@ -87,6 +87,7 @@
         grid-row-end: 3;
         grid-column-start: 3;
         justify-self: center;
+        margin: 10px 0;
         @include for-tablet-landscape-down {
             grid-row-start: 3;
             grid-row-end: 3;

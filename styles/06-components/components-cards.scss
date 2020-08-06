@@ -23,9 +23,6 @@
         }
         &__picture {
             grid-row: 1/ span 2;
-            // & img {
-            //     width: 11vw;
-            // }
             @include for-tablet-landscape-down {
                 grid-row: 1;
             }
