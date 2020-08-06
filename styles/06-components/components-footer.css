@@ -198,6 +198,13 @@
   color: #41BEAD;
 }
 
+@media (max-width: 799px) {
+  .footer__social-item {
+    display: inline-block;
+    transform: translateY(-100%);
+  }
+}
+
 .footer__copyright {
   margin-top: 2rem;
   color: #919191;

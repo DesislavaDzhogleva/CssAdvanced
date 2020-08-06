@@ -9,6 +9,12 @@
     @include for-tablet-landscape-down {
         flex-flow: column;
     }
+    &--margined {
+        margin-bottom: 4.5rem;
+        @include for-tablet-landscape-down {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .course-card {

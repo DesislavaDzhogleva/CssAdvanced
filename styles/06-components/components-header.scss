@@ -48,6 +48,7 @@
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
         grid-column-gap: 2rem;
+        grid-row-gap: 0.5rem;
         font-size: 1.125rem;
         @include for-desktop-down {
             font-size: 0.9rem;
@@ -64,6 +65,7 @@
         grid-row-start: 1;
         grid-row-end: 3;
         justify-self: right;
+        align-self: center;
     }
     &__subtext {
         text-align: left;
@@ -101,7 +103,7 @@
         width: 50%;
         color: white;
         @include for-tablet-landscape-down {
-            font-size: 1.8rem;
+            font-size: 2rem;
             width: auto;
         }
     }

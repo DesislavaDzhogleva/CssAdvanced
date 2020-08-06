@@ -1,6 +1,21 @@
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-breakpoints.scss';
 .programs {
     background-color: $secondary-500;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        border-top: 10px dotted white;
+        transform: translateY(-50%);
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 10px dotted white;
+        transform: translateY(50%);
+    }
 }
 
 .program {
@@ -22,6 +37,9 @@
     &__content {
         grid-row: 2;
         grid-column: 2;
+        @include for-tablet-landscape-down {
+            grid-column: 1/3;
+        }
     }
     &__image {
         grid-row: 3;
@@ -39,6 +57,11 @@
     &__form {
         grid-column: 2;
         grid-row: 3;
+        display: grid;
+        grid-gap: 1rem;
+        @include for-tablet-landscape-down {
+            grid-column: 1/3;
+        }
     }
     &__subtitle {
         margin: 0.5rem 0;
@@ -47,10 +70,13 @@
         position: relative;
         &:after {
             content: "";
-            background: url('../../assets/arrow_select.png') center no-repeat;
+            background: url('assets/arrow_select.png') center no-repeat;
             position: absolute;
-            right: 10px;
-            top: 10px;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            height: 1.2rem;
         }
     }
 }

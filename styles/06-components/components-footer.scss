@@ -125,6 +125,10 @@
             &:hover {
                 color: $primary-300;
             }
+            @include for-tablet-landscape-down {
+                display: inline-block;
+                transform: translateY(-100%);
+            }
         }
     }
     &__copyright {

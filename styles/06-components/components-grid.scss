@@ -8,6 +8,9 @@
     display: grid;
     grid-template-rows: repeat(6, auto);
     row-gap: 5rem;
+    @include for-tablet-landscape-down {
+        grid-template-rows: repeat(5, auto);
+    }
 }
 
 .main-trainers {
