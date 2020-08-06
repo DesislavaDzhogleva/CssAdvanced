@@ -1,5 +1,6 @@
 @import '../01-settings/settings-breakpoints.scss';
 @import '../01-settings/settings-colors.scss';
+@import '../01-settings/settings-fonts.scss';
 .cards-list {
     display: grid;
     grid-template-columns: repeat( 4, 1fr);
@@ -10,6 +11,7 @@
     }
     @include for-tablet-landscape-down {
         grid-template-columns: 1fr;
+        grid-gap: 2.6rem;
     }
     .card-preview {
         display: grid;
@@ -23,6 +25,51 @@
         &__subtitle {
             color: $grey-400;
             margin: 0.5rem 0;
+        }
+        &__image {
+            cursor: pointer;
+            position: relative;
+            &:before {
+                transition: all 1s ease-in-out;
+            }
+            &:hover:before {
+                content: "i";
+                position: absolute;
+                top: 4%;
+                left: 4%;
+                bottom: 4%;
+                right: 4%;
+                background: $secondary-800-transparent;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 6rem;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                padding-top: 12%;
+                font-weight: bold;
+            }
+            &:after {
+                transition: all 1s ease-in-out;
+            }
+            &:hover:after {
+                content: "НАУЧИ ОЩЕ";
+                position: absolute;
+                top: 4%;
+                left: 4%;
+                bottom: 4%;
+                right: 4%;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: white;
+                font-family: Latto;
+                padding-top: 15%;
+                transform: translateY(5.7rem);
+            }
+            img {
+                display: block;
+            }
         }
     }
 }

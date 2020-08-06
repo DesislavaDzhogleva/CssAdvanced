@@ -5,6 +5,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 2rem;
+    border-bottom: 10px dotted $primary-50;
+    padding-bottom: 6rem;
     @include for-desktop-down {
         grid-template-columns: auto;
     }
@@ -17,6 +19,7 @@
         @include for-tablet-landscape-down {
             justify-items: center;
             grid-template-columns: 1fr;
+            grid-gap: 2rem;
         }
         &__picture {
             grid-row: 1/ span 2;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -626,7 +627,9 @@ select::placeholder {
   justify-items: end;
 }
 
-.navigation--container {
+.navigation--wrapper {
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
   background: white;
 }
 
@@ -696,10 +699,10 @@ select::placeholder {
     background: white;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
     justify-items: center;
     grid-gap: 1rem;
@@ -821,8 +824,8 @@ select::placeholder {
 .main-trainers {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  row-gap: 5rem;
-  padding-top: 5rem;
+  row-gap: 6rem;
+  padding-top: 6rem;
 }
 
 .description {
@@ -1396,6 +1399,8 @@ select::placeholder {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 2rem;
+  border-bottom: 10px dotted #DFF4F1;
+  padding-bottom: 6rem;
 }
 
 @media (max-width: 1199px) {
@@ -1416,6 +1421,7 @@ select::placeholder {
   .cards .card {
     justify-items: center;
     grid-template-columns: 1fr;
+    grid-gap: 2rem;
   }
 }
 
@@ -1477,6 +1483,7 @@ select::placeholder {
 }
 
 .cta--wrapper {
+  border-top: 12px solid #92CDFB;
   background-color: #66B9F8;
 }
 
@@ -1627,6 +1634,38 @@ select::placeholder {
         @content;
     }
 }*/
+@font-face {
+  font-family: 'Lato';
+  src: url("assets/fonts/lato-bold.eot") format("embedded-opentype");
+  src: local("Lato Bold"), local("Lato-Bold"), url("assets/fonts/lato-bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/lato-bold.woff2") format("woff2"), url("assets/fonts/lato-bold.woff") format("woff"), url("assets/fonts/lato-bold.ttf") format("truetype"), url("assets/fonts/lato-bold.svg#lato") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("assets/fonts/lato-bolditalic.eot") format("embedded-opentype");
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("assets/fonts/lato-bolditalic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/lato-bolditalic.woff2") format("woff2"), url("assets/fonts/lato-bolditalic.woff") format("woff"), url("assets/fonts/lato-bolditalic.ttf") format("truetype"), url("assets/fonts/lato-bolditalic.svg#lato") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("assets/fonts/lato-regular.eot") format("embedded-opentype");
+  src: local("Lato Regular"), local("Lato-Regular"), url("assets/fonts/lato-regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/lato-regular.woff2") format("woff2"), url("assets/fonts/lato-regular.woff") format("woff"), url("assets/fonts/lato-regular.ttf") format("truetype"), url("assets/fonts/lato-regular.svg#lato") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("assets/fonts/lato-italic.eot") format("embedded-opentype");
+  src: local("Lato Italic"), local("Lato-Italic"), url("assets/fonts/lato-italic.eot?#iefix") format("embedded-opentype"), url("assets/fonts/lato-italic.woff2") format("woff2"), url("assets/fonts/lato-italic.woff") format("woff"), url("assets/fonts/lato-italic.ttf") format("truetype"), url("assets/fonts/lato-italic.svg#lato") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+
 .cards-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1643,6 +1682,7 @@ select::placeholder {
 @media (max-width: 799px) {
   .cards-list {
     grid-template-columns: 1fr;
+    grid-gap: 2.6rem;
   }
 }
 
@@ -1663,6 +1703,57 @@ select::placeholder {
   margin: 0.5rem 0;
 }
 
+.cards-list .card-preview__image {
+  cursor: pointer;
+  position: relative;
+}
+
+.cards-list .card-preview__image:before {
+  transition: all 1s ease-in-out;
+}
+
+.cards-list .card-preview__image:hover:before {
+  content: "i";
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  bottom: 4%;
+  right: 4%;
+  background: #FF9100ba;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 6rem;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 12%;
+  font-weight: bold;
+}
+
+.cards-list .card-preview__image:after {
+  transition: all 1s ease-in-out;
+}
+
+.cards-list .card-preview__image:hover:after {
+  content: "НАУЧИ ОЩЕ";
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  bottom: 4%;
+  right: 4%;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  font-family: Latto;
+  padding-top: 15%;
+  transform: translateY(5.7rem);
+}
+
+.cards-list .card-preview__image img {
+  display: block;
+}
+
 .additional-info {
   background: #FFF8E1;
   display: grid;
@@ -1672,7 +1763,7 @@ select::placeholder {
 
 .additional-info__heading {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #41BEAD;
 }
 
@@ -1683,4 +1774,5 @@ select::placeholder {
 .additional-info__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
 }

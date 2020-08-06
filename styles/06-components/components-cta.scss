@@ -5,6 +5,7 @@
     justify-content: center;
     grid-gap: 1.5rem;
     &--wrapper {
+        border-top: 12px solid $blue-200;
         background-color: $blue-300;
     }
     padding-top: 4rem;
