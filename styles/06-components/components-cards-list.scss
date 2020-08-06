@@ -18,6 +18,13 @@
         grid-template-rows: auto auto auto;
         justify-items: center;
         grid-gap: 0.5rem;
+        @for $i from 5 through 16 {
+            &:nth-child(#{$i}) {
+                @include for-tablet-landscape-down {
+                    display: none;
+                }
+            }
+        }
         &__title {
             color: $primary-300;
             margin: 0;
