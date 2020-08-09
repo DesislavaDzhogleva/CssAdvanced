@@ -47,6 +47,11 @@ a {
   line-height: inherit;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 button {
   font-weight: 800;
 }

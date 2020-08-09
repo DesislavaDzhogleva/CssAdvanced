@@ -296,6 +296,11 @@ a {
   line-height: inherit;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 button {
   font-weight: 800;
 }
@@ -419,6 +424,61 @@ select::placeholder {
         @content;
     }
 }*/
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes apear {
+  from {
+    transform: translate(100%, -100%);
+    border-bottom-left-radius: 200%;
+  }
+  to {
+    transform: translate(0%, 0%);
+    border-radius: 0%;
+  }
+}
+
+@keyframes disapear {
+  0% {
+    transform: translate(0%, 0%);
+    border-radius: 0%;
+  }
+  100% {
+    transform: translate(100%, -100%);
+    border-bottom-left-radius: 200%;
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .header--map {
   background: url("assets/Map.svg") center no-repeat;
   background-size: cover;
@@ -480,6 +540,16 @@ select::placeholder {
   grid-column-gap: 2rem;
   grid-row-gap: 0.5rem;
   font-size: 1.125rem;
+}
+
+.header__item:hover .header__image {
+  animation-name: bump;
+  animation-duration: 0.5s;
+}
+
+.header__item:hover .header__subtext, .header__item:hover .header__text {
+  animation-name: scale;
+  animation-duration: 0.5s;
 }
 
 @media (max-width: 1199px) {
@@ -1108,19 +1178,43 @@ select::placeholder {
     border-bottom-left-radius: 200%;
   }
   to {
-    transform: translateY(0%, 0%);
+    transform: translate(0%, 0%);
     border-radius: 0%;
   }
 }
 
 @keyframes disapear {
   0% {
-    transform: translateY(0%, 0%);
+    transform: translate(0%, 0%);
     border-radius: 0%;
   }
   100% {
     transform: translate(100%, -100%);
     border-bottom-left-radius: 200%;
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
